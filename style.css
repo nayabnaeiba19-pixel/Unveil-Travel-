@@ -508,7 +508,6 @@ body {
   margin: 0;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .newsletter-form {
     margin-top: 25px;
@@ -516,5 +515,425 @@ body {
 
   .footer [class*="col-"] {
     margin-bottom: 30px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.hero,
+.contact,
+.contact-section,
+.footer-section {
+  animation: sectionReveal 1s ease both;
+}
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  top: -180px;
+  left: -100px;
+  animation: floatingCircle 7s ease-in-out infinite;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  right: -80px;
+  bottom: -100px;
+  animation: floatingCircle 8s ease-in-out infinite reverse;
+}
+
+@keyframes floatingCircle {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(25px, 30px);
+  }
+}
+
+.place-image {
+  transition:
+    transform 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.place-image:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 30px 70px rgba(0, 0, 0, 0.35),
+    0 0 0 8px rgba(255, 255, 255, 0.04);
+}
+
+.place-image img {
+  transition: transform 1s ease;
+}
+
+.place-image:hover img {
+  transform: scale(1.08);
+}
+
+.image-text {
+  transition: transform 0.5s ease;
+}
+
+.place-image:hover .image-text {
+  transform: translateY(-8px);
+}
+
+.image-text h2 {
+  transition: letter-spacing 0.5s ease;
+}
+
+.place-image:hover .image-text h2 {
+  letter-spacing: 5px;
+}
+
+.contact-item {
+  overflow: hidden;
+}
+
+.contact-item::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  top: 0;
+  background: #222;
+  transition: width 0.5s ease;
+}
+
+.contact-item:hover::before {
+  width: 100%;
+}
+
+.contact-item h3 {
+  transition: transform 0.4s ease;
+}
+
+.contact-item:hover h3 {
+  transform: translateX(5px);
+}
+
+.contact-item p {
+  transition: color 0.4s ease;
+}
+
+.contact-item:hover p {
+  color: #555;
+}
+
+.contact-form {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.contact-form::before {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  right: -70px;
+  top: -70px;
+  transition: transform 0.7s ease;
+}
+
+.contact-form:hover::before {
+  transform: scale(1.5);
+}
+
+.contact-form:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form .form-control {
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+.submit-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.5s ease,
+    height 0.5s ease;
+}
+
+.submit-btn:hover::before {
+  width: 250px;
+  height: 250px;
+}
+
+.location {
+  transition: transform 0.5s ease;
+}
+
+.location:hover {
+  transform: translateY(-5px);
+}
+
+.location iframe {
+  border-radius: 15px;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.location iframe:hover {
+  transform: scale(1.015);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.social-icons a {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icons a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.4s ease,
+    height 0.4s ease;
+}
+
+.social-icons a:hover::before {
+  width: 100px;
+  height: 100px;
+}
+
+.social-icons a i {
+  position: relative;
+  z-index: 2;
+}
+
+.newsletter {
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  right: -100px;
+  top: -130px;
+  animation: newsletterFloat 8s ease-in-out infinite;
+}
+
+@keyframes newsletterFloat {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(20deg) scale(1.15);
+  }
+}
+
+.newsletter-form input {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.newsletter-form input:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.newsletter-form button {
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #7fa67f;
+  transform: translateX(4px);
+}
+
+.footer {
+  position: relative;
+}
+
+.footer ul li a {
+  position: relative;
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
+}
+
+.footer ul li a:hover {
+  padding-left: 8px;
+}
+
+.footer-social a {
+  transition:
+    transform 0.3s ease,
+    border-radius 0.3s ease;
+}
+
+.footer-social a:hover {
+  transform: translateY(-6px) rotate(5deg);
+  border-radius: 50%;
+}
+
+.call-btn {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.call-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cursor-dot {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #9cc79c;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s linear;
+}
+
+.back-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+  background: #29383d;
+
+  border: none;
+  border-radius: 50%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    background 0.3s ease;
+
+  z-index: 1000;
+}
+
+.back-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-top:hover {
+  background: #9cc79c;
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .place-image:hover {
+    transform: translateY(-5px);
+  }
+
+  .back-top {
+    right: 15px;
+    bottom: 15px;
   }
 }
