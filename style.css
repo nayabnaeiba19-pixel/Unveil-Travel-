@@ -45,8 +45,6 @@ body {
   line-height: 1.7;
 }
 
-
-
 .place-image {
   position: relative;
   height: 480px;
@@ -187,8 +185,6 @@ body {
   transform: translateX(6px);
 }
 
-
-
 .hero-content {
   animation: textShow 0.8s ease;
 }
@@ -217,7 +213,6 @@ body {
   }
 }
 
-
 @media (max-width: 991px) {
   .hero {
     height: 680px;
@@ -245,8 +240,6 @@ body {
     margin-bottom: 25px;
   }
 }
-
-
 
 * {
   box-sizing: border-box;
@@ -325,7 +318,6 @@ body {
   transform: translateY(-3px);
 }
 
-
 .location {
   padding: 0 5px;
 }
@@ -338,8 +330,6 @@ body {
   color: #777;
   margin-bottom: 25px;
 }
-
-
 
 .map {
   width: 100%;
@@ -391,7 +381,6 @@ body {
   transform: translateY(-5px);
 }
 
-
 @media (max-width: 991px) {
   .contact-section {
     padding: 50px 15px;
@@ -405,7 +394,6 @@ body {
     height: 300px;
   }
 }
-
 
 .newsletter {
   background: #2d4148;
@@ -442,4 +430,91 @@ body {
   border-radius: 0 30px 30px 0;
   background: #9cc79c;
   color: #fff;
+}
+.footer {
+  background: #263840;
+  color: #fff;
+  padding: 50px 0 0;
+}
+
+.footer-about h2 {
+  font-size: 38px;
+  margin-bottom: 20px;
+}
+
+.footer-about p,
+.footer p {
+  color: #c8d0d2;
+  line-height: 1.7;
+}
+
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #d5dddd;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #9cc79c;
+}
+
+.footer-social {
+  display: flex;
+  gap: 6px;
+  margin-top: 20px;
+}
+
+.footer-social a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #9cc79c;
+  color: #fff;
+}
+
+.call-btn {
+  display: inline-block;
+  background: #9cc79c;
+  color: #fff !important;
+  padding: 12px 25px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #536269;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-form {
+    margin-top: 25px;
+  }
+
+  .footer [class*="col-"] {
+    margin-bottom: 30px;
+  }
 }
