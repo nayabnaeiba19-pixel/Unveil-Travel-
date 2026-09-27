@@ -90,3 +90,37 @@ window.addEventListener("mousemove", (event) => {
     placeImage.style.transform = `translate(${x}px, ${y}px)`;
   }
 });
+/* =========================================
+   NAVBAR SCROLL
+========================================= */
+
+const navbar = document.querySelector(".navbar");
+
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 70) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+}
+/* =========================================
+   MOBILE NAV
+========================================= */
+
+const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+const mainNav = document.getElementById("mainNav");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth < 992 && mainNav) {
+      const collapse = bootstrap.Collapse.getInstance(mainNav);
+
+      if (collapse) {
+        collapse.hide();
+      }
+    }
+  });
+});
