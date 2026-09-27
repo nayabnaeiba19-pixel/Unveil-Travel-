@@ -1,0 +1,1542 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+body {
+
+    font-family: "Poppins", sans-serif;
+
+    overflow: hidden;
+
+    background: #111;
+
+}
+
+
+/* =========================================================
+   TRAVEL PAGE
+========================================================= */
+
+.travel-page {
+
+    width: 100%;
+
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        url("images/train.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition:
+        background-image .8s ease,
+        transform 1.2s ease;
+
+    z-index: 0;
+
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.72) 0%,
+            rgba(0,0,0,.38) 45%,
+            rgba(0,0,0,.20) 100%
+        );
+
+    z-index: 1;
+
+}
+
+
+/* =========================================================
+   ODD PLACES HEADER
+========================================================= */
+
+.navbar {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    min-height: 100px;
+
+    padding: 0 55px;
+
+    background: transparent;
+
+    z-index: 1000;
+
+    transition:
+        background .5s ease,
+        backdrop-filter .5s ease,
+        box-shadow .5s ease;
+
+}
+
+
+/* =========================================================
+   HEADER HOVER GOLD LINE
+========================================================= */
+
+.navbar::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #d4af37;
+
+    transform: translateX(-50%);
+
+    transition:
+        width .6s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.navbar:hover::after {
+
+    width: 65%;
+
+}
+
+
+/* =========================================================
+   HEADER LIGHT SWEEP
+========================================================= */
+
+.navbar::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -30%;
+
+    width: 25%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(212,175,55,.9),
+            transparent
+        );
+
+    opacity: 0;
+
+}
+
+
+.navbar:hover::before {
+
+    left: 110%;
+
+    opacity: 1;
+
+    transition:
+        left 1.3s ease,
+        opacity .3s ease;
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar .logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+
+    transition:
+        letter-spacing .5s ease;
+
+}
+
+
+.navbar .logo span {
+
+    color: #d4af37;
+
+}
+
+
+.navbar .logo img {
+
+    width: 48px;
+
+    height: 48px;
+
+    object-fit: contain;
+
+    transition:
+        transform .6s cubic-bezier(.16,1,.3,1),
+        filter .5s ease;
+
+}
+
+
+.navbar .logo:hover {
+
+    letter-spacing: 3px;
+
+}
+
+
+.navbar .logo:hover img {
+
+    transform:
+        rotate(-8deg)
+        scale(1.12);
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(212,175,55,.55)
+        );
+
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar .navbar-nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.navbar .navbar-nav .nav-link {
+
+    position: relative;
+
+    color:
+        rgba(255,255,255,.72);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    padding: 12px 14px;
+
+    white-space: nowrap;
+
+    transition:
+        color .35s ease,
+        transform .35s ease,
+        text-shadow .35s ease;
+
+}
+
+
+/* underline */
+
+.navbar .navbar-nav .nav-link::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+
+    right: 14px;
+
+    bottom: 5px;
+
+    height: 1px;
+
+    background: #d4af37;
+
+    transform: scaleX(0);
+
+    transform-origin: center;
+
+    transition:
+        transform .4s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+/* gold dot */
+
+.navbar .navbar-nav .nav-link::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+
+    left: 50%;
+
+    bottom: 2px;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    transition:
+        transform .35s ease;
+
+}
+
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+
+    color: white;
+
+    transform:
+        translateY(-2px);
+
+    text-shadow:
+        0 0 18px
+        rgba(255,255,255,.18);
+
+}
+
+
+.navbar .navbar-nav .nav-link:hover::after,
+.navbar .navbar-nav .nav-link.active::after {
+
+    transform:
+        scaleX(1);
+
+}
+
+
+.navbar .navbar-nav .nav-link:hover::before,
+.navbar .navbar-nav .nav-link.active::before {
+
+    transform:
+        translateX(-50%)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   NAV ACTIONS
+========================================================= */
+
+.nav-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
+.search-btn {
+
+    position: relative;
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.055);
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform .4s ease,
+        background .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.search-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    border-radius: inherit;
+
+    padding: 1px;
+
+    background:
+        conic-gradient(
+            from 0deg,
+            transparent,
+            #d4af37,
+            transparent 25%,
+            transparent 70%,
+            #d4af37,
+            transparent
+        );
+
+ -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite: xor;
+
+    mask-composite: exclude;
+
+    opacity: .65;
+
+    animation:
+        rotateRing 5s linear infinite;
+
+}
+
+
+.search-btn i {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 14px;
+
+}
+
+
+.search-btn:hover {
+
+    transform:
+        scale(1.1)
+        rotate(8deg);
+
+    background:
+        rgba(212,175,55,.1);
+
+    box-shadow:
+        0 0 30px
+        rgba(212,175,55,.2);
+
+}
+
+
+@keyframes rotateRing {
+
+    to {
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   BOOK NOW
+========================================================= */
+
+.luxury-book {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-height: 48px;
+
+    padding:
+        0 20px 0 23px;
+
+    border-radius: 999px;
+
+    color: #111;
+
+    background: white;
+
+    text-decoration: none;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+
+    overflow: hidden;
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        background .4s ease;
+
+}
+
+
+.luxury-book::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.9),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left .8s ease;
+
+}
+
+
+.luxury-book:hover::before {
+
+    left: 140%;
+
+}
+
+
+.luxury-book:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.04);
+
+    box-shadow:
+        0 15px 35px
+        rgba(255,255,255,.16);
+
+    background: #f4f0e8;
+
+}
+
+
+.luxury-book span,
+.luxury-book i {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.luxury-book i {
+
+    font-size: 14px;
+
+    transition:
+        transform .4s ease;
+
+}
+
+
+.luxury-book:hover i {
+
+    transform:
+        translate(3px,-3px);
+
+}
+
+
+/* =========================================================
+   MOBILE TOGGLER
+========================================================= */
+
+.navbar-toggler {
+
+    width: 48px;
+
+    height: 48px;
+
+    padding: 0;
+
+    border:
+        1px solid
+        rgba(255,255,255,.2);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.2);
+
+    box-shadow: none;
+
+}
+
+
+.navbar-toggler:focus {
+
+    box-shadow:
+        0 0 0 3px
+        rgba(212,175,55,.15);
+
+}
+
+
+.navbar-toggler-icon {
+
+    width: 20px;
+
+    height: 20px;
+
+    filter:
+        brightness(0)
+        invert(1);
+
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.content {
+
+    position: relative;
+
+    z-index: 5;
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 40px;
+
+}
+
+
+.left-content {
+
+    width: 390px;
+
+    margin-top: 50px;
+
+}
+
+
+.small-line {
+
+    width: 21px;
+
+    height: 3px;
+
+    background: white;
+
+    margin-bottom: 10px;
+
+}
+
+
+.category {
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    color:
+        rgba(255,255,255,.9);
+
+    margin-bottom: 14px;
+
+}
+
+
+.left-content h1 {
+
+    font-family:
+        "Oswald",
+        sans-serif;
+
+    font-size:
+        clamp(50px,5vw,72px);
+
+    line-height: .98;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 18px;
+
+    text-transform: uppercase;
+
+}
+
+
+.description {
+
+    max-width: 370px;
+
+    font-size: 11px;
+
+    line-height: 1.55;
+
+    color:
+        rgba(255,255,255,.88);
+
+    margin-bottom: 18px;
+
+}
+
+
+/* =========================================================
+   DISCOVER
+========================================================= */
+
+.discover-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.bookmark {
+
+    width: 27px;
+
+    height: 27px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e8c348;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.bookmark:hover {
+
+    transform:
+        translateY(-3px)
+        scale(1.08);
+
+    box-shadow:
+        0 8px 20px
+        rgba(232,195,72,.35);
+
+}
+
+
+.bookmark i {
+
+    font-size: 12px;
+
+}
+
+
+.discover-btn {
+
+    height: 31px;
+
+    padding: 0 17px;
+
+    border-radius: 20px;
+
+    border:
+        1px solid white;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 500;
+
+    letter-spacing: .4px;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.discover-btn:hover {
+
+    background: white;
+
+    color: black;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(255,255,255,.18);
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards-wrapper {
+
+    position: absolute;
+
+    right: -5px;
+
+    bottom: 85px;
+
+    width: 560px;
+
+    overflow: hidden;
+
+}
+
+
+.trip-cards {
+
+    display: flex;
+
+    gap: 20px;
+
+    transition:
+        transform .7s ease;
+
+}
+
+
+.trip-card {
+
+    flex: 0 0 140px;
+
+    height: 210px;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 12px 25px
+        rgba(0,0,0,.35);
+
+    transition:
+        transform .4s ease,
+        opacity .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.trip-card:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.025);
+
+    box-shadow:
+        0 20px 35px
+        rgba(0,0,0,.5);
+
+}
+
+
+.trip-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.9),
+            rgba(0,0,0,.05) 70%
+        );
+
+}
+
+
+.trip-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform .7s ease;
+
+}
+
+
+.trip-card:hover img {
+
+    transform:
+        scale(1.08);
+
+}
+
+
+.card-info {
+
+    position: absolute;
+
+    left: 12px;
+
+    right: 8px;
+
+    bottom: 11px;
+
+    z-index: 2;
+
+}
+
+
+.card-line {
+
+    width: 21px;
+
+    height: 3px;
+
+    background: white;
+
+    margin-bottom: 6px;
+
+}
+
+
+.card-location {
+
+    font-size: 8px;
+
+    color: white;
+
+    margin-bottom: 2px;
+
+}
+
+
+.card-title {
+
+    font-family:
+        "Oswald",
+        sans-serif;
+
+    font-size: 17px;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   BOTTOM CONTROLS
+========================================================= */
+
+.bottom-controls {
+
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 12px;
+
+    left: 40px;
+
+    right: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.arrows {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+
+.arrows button {
+
+    width: 39px;
+
+    height: 39px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.45);
+
+    background:
+        rgba(0,0,0,.15);
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.arrows button:hover {
+
+    background: white;
+
+    color: black;
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.progress-area {
+
+    flex: 1;
+
+    margin-left: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.progress-line {
+
+    height: 2px;
+
+    width: 350px;
+
+    background:
+        linear-gradient(
+            to right,
+            #e7c344 0%,
+            #e7c344 20%,
+            rgba(255,255,255,.3) 20%,
+            rgba(255,255,255,.3) 100%
+        );
+
+}
+
+
+.progress-number {
+
+    margin-left: auto;
+
+    font-family:
+        "Oswald",
+        sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 500;
+
+}
+
+
+.slash {
+
+    margin: 0 5px;
+
+    color:
+        rgba(255,255,255,.5);
+
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.fade-out {
+
+    animation:
+        fadeOut .4s ease forwards;
+
+}
+
+
+.fade-in {
+
+    animation:
+        fadeIn .7s ease forwards;
+
+}
+
+
+@keyframes fadeOut {
+
+    from {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+    to {
+
+        opacity: 0;
+
+        transform:
+            scale(1.03);
+
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(1.03);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+
+    }
+
+}
+
+
+/* =========================================================
+   DESKTOP HEADER
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .navbar-collapse {
+
+        display: flex !important;
+
+        align-items: center;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar {
+
+        min-height: 85px;
+
+        padding:
+            0 30px;
+
+    }
+
+
+    .navbar-collapse {
+
+        margin-top: 15px;
+
+        padding: 22px;
+
+        border-radius: 24px;
+
+        background:
+            rgba(7,9,10,.88);
+
+        backdrop-filter:
+            blur(28px);
+
+        -webkit-backdrop-filter:
+            blur(28px);
+
+        border:
+            1px solid
+            rgba(255,255,255,.08);
+
+        box-shadow:
+            0 25px 60px
+            rgba(0,0,0,.4);
+
+    }
+
+
+    .navbar-nav {
+
+        align-items: stretch;
+
+        gap: 2px;
+
+    }
+
+
+    .navbar-nav .nav-link {
+
+        padding:
+            13px 12px;
+
+        font-size: 9px;
+
+    }
+
+
+    .nav-actions {
+
+        margin-top: 15px;
+
+        justify-content: flex-end;
+
+    }
+
+
+    .left-content {
+
+        width: 340px;
+
+    }
+
+
+    .left-content h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .cards-wrapper {
+
+        width: 480px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        padding:
+            0 20px;
+
+    }
+
+
+    .navbar .logo {
+
+        font-size: 24px;
+
+    }
+
+
+    .navbar .logo img {
+
+        width: 40px;
+
+        height: 40px;
+
+    }
+
+
+    .search-btn {
+
+        display: none;
+
+    }
+
+
+    .luxury-book {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+
+    .nav-actions {
+
+        width: 100%;
+
+    }
+
+
+    .content {
+
+        padding-left: 22px;
+
+        align-items: center;
+
+    }
+
+
+    .left-content {
+
+        width: 80%;
+
+        margin-top: 0;
+
+    }
+
+
+    .left-content h1 {
+
+        font-size: 48px;
+
+    }
+
+
+    .description {
+
+        width: 100%;
+
+        font-size: 10px;
+
+    }
+
+
+    .cards-wrapper {
+
+        bottom: 105px;
+
+        right: -10px;
+
+        width: 290px;
+
+    }
+
+
+    .trip-card {
+
+        flex-basis: 125px;
+
+        height: 180px;
+
+    }
+
+
+    .bottom-controls {
+
+        left: 20px;
+
+        right: 20px;
+
+    }
+
+
+    .progress-line {
+
+        width: 100%;
+
+    }
+
+}

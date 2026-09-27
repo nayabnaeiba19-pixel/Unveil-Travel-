@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ODD PLACES — Trip Types</title>
+
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="type.css">
+
+</head>
+
+
+<body>
+
+
+<div class="travel-page">
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background"></div>
+
+    <div class="overlay"></div>
+
+
+
+    <!-- =====================================================
+         ODD PLACES HEADER
+         OLD HEADER COMPLETELY REMOVED
+    ====================================================== -->
+
+    <header class="navbar navbar-expand-lg">
+
+        <div class="container-fluid px-lg-5">
+
+
+            <!-- LOGO -->
+
+            <a href="#" class="logo">
+
+                <img
+                    src="images/no-bg (1).png"
+                    alt="Voyage"
+                >
+
+                Voyage<span>.</span>
+
+            </a>
+
+
+
+            <!-- MOBILE BUTTON -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+
+            <!-- NAVIGATION -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainNav"
+            >
+
+
+                <ul class="navbar-nav mx-auto">
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="indext.html"
+                        >
+                            DESTINATIONS
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="type.html"
+                        >
+                            TRIP TYPES
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="first.html"
+                        >
+                            GET INSPIREd
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="contact.html"
+                        >
+                        CONTACT
+                        </a>
+
+                    </li>
+
+
+                </ul>
+
+
+
+                <!-- RIGHT SIDE -->
+
+                <div class="nav-actions">
+
+
+                    <button
+                        class="search-btn"
+                        type="button"
+                        aria-label="Search"
+                    >
+
+                        <i class="bi bi-search"></i>
+
+                    </button>
+
+
+
+                    <a
+                        href="#"
+                        class="luxury-book"
+                    >
+
+                        <span>
+                            BOOK NOW
+                        </span>
+
+                        <i class="bi bi-arrow-up-right"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main class="content">
+
+
+        <!-- LEFT SIDE -->
+
+        <div class="left-content">
+
+
+            <div class="small-line"></div>
+
+
+            <div class="category">
+                Train Journey
+            </div>
+
+
+            <h1>
+                RAILWAY<br>
+                ADVENTURE
+            </h1>
+
+
+            <p class="description">
+
+                Discover unforgettable journeys by train.
+                Travel through beautiful landscapes, historic
+                cities and breathtaking destinations while
+                enjoying the comfort of a unique railway adventure.
+
+            </p>
+
+
+
+            <div class="discover-area">
+
+
+                <button
+                    class="bookmark"
+                    type="button"
+                >
+
+                    <i class="bi bi-bookmark-fill"></i>
+
+                </button>
+
+
+
+                <button
+                    class="discover-btn"
+                    type="button"
+                >
+
+                    DISCOVER TRIP
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             TRIP CARDS
+        ================================================== -->
+
+        <div class="cards-wrapper">
+
+            <div
+                class="trip-cards"
+                id="tripCards"
+            ></div>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         BOTTOM CONTROLS
+    ====================================================== -->
+
+    <div class="bottom-controls">
+
+
+        <div class="arrows">
+
+
+            <button
+                id="prevBtn"
+                type="button"
+            >
+
+                <i class="bi bi-chevron-left"></i>
+
+            </button>
+
+
+            <button
+                id="nextBtn"
+                type="button"
+            >
+
+                <i class="bi bi-chevron-right"></i>
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="progress-area">
+
+
+            <span class="progress-line"></span>
+
+
+
+            <span class="progress-number">
+
+                <span id="currentNumber">
+                    01
+                </span>
+
+                <span class="slash">
+                    /
+                </span>
+
+                <span id="totalNumber">
+                    05
+                </span>
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     BOOTSTRAP JS
+====================================================== -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- =====================================================
+     MAIN JS
+====================================================== -->
+
+<script src="type.js"></script>
+
+
+</body>
+
+</html>
