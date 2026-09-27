@@ -169,22 +169,4 @@ CSS / Animations & Visual Design
 👩‍💻 **Team Member 04**  
 JavaScript & Interactive Features
 
----
 
-## 📂 Project Structure
-
-```text
-unveil-travel/
-│
-├── index.html
-├── style.css
-├── script.js
-│
-├── images/
-│   ├── destinations/
-│   ├── trips/
-│   └── backgrounds/
-│
-├── videos/
-│
-└── README.md
