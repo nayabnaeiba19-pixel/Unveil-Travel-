@@ -802,3 +802,19 @@ navLinks.forEach(link => {
     });
 
 });
+const newsletterForm = document.querySelector(".newsletter-form");
+
+newsletterForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const email = this.querySelector("input").value;
+
+  if (!email) {
+    alert("Please enter your email.");
+    return;
+  }
+
+  alert("Thank you for subscribing to our newsletter!");
+
+  this.reset();
+});

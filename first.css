@@ -3538,56 +3538,992 @@ body::after {
 /* =========================================================
    FOOTER
 ========================================================= */
+/* =========================================================
+   LUXURY FOOTER
+========================================================= */
 
-.footer-column a {
+.luxury-footer {
+
     position: relative;
 
-    transition:
-        color .4s ease,
-        transform .5s var(--ease),
-        letter-spacing .5s var(--ease);
+    width: 100%;
+
+    min-height: 430px;
+
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(212,175,55,.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #070909 0%,
+            #0c0e0f 50%,
+            #050606 100%
+        );
+
+    color: white;
+
+    overflow: hidden;
+
+    border-top:
+        1px solid
+        rgba(212,175,55,.18);
+
 }
 
-.footer-column a::before {
-    content: "↗";
+
+/* =========================================================
+   GOLD GLOW
+========================================================= */
+
+.footer-glow {
 
     position: absolute;
 
-    left: -22px;
+    width: 420px;
+
+    height: 420px;
+
+    right: -180px;
+
+    top: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,.14),
+            transparent 68%
+        );
+
+    filter: blur(20px);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.footer-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding:
+        75px 55px 25px;
+
+}
+
+
+/* =========================================================
+   FOOTER TOP
+========================================================= */
+
+.footer-top {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        .8fr
+        .8fr
+        1.5fr;
+
+    gap: 70px;
+
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.footer-brand {
+
+    max-width: 300px;
+
+}
+
+
+.footer-logo {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    transition:
+        letter-spacing .4s ease;
+
+}
+
+
+.footer-logo img {
+
+    width: 45px;
+
+    height: 45px;
+
+    object-fit: contain;
+
+    transition:
+        transform .5s cubic-bezier(.16,1,.3,1),
+        filter .5s ease;
+
+}
+
+
+.footer-logo:hover {
+
+    letter-spacing: 3px;
+
+}
+
+
+.footer-logo:hover img {
+
+    transform:
+        rotate(-8deg)
+        scale(1.12);
+
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(212,175,55,.6)
+        );
+
+}
+
+
+.gold-dot {
+
+    color: #d4af37;
+
+}
+
+
+.footer-brand p {
+
+    margin-top: 24px;
+
+    max-width: 270px;
+
+    color:
+        rgba(255,255,255,.48);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.footer-column h4 {
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 25px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+}
+
+
+.footer-column h4::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -9px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #d4af37;
+
+    transition:
+        width .4s ease;
+
+}
+
+
+.footer-column:hover h4::after {
+
+    width: 100%;
+
+}
+
+
+.footer-column ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+.footer-column li {
+
+    margin-bottom: 15px;
+
+}
+
+
+.footer-column a {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color:
+        rgba(255,255,255,.72);
+
+    text-decoration: none;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: .5px;
+
+    transition:
+        color .35s ease,
+        transform .35s ease;
+
+}
+
+
+.footer-column a span {
+
+    color: #d4af37;
 
     opacity: 0;
 
     transform:
-        translate(-8px,5px)
-        scale(.6);
+        translate(-5px, 5px);
 
     transition:
-        opacity .4s ease,
-        transform .5s var(--ease);
+        opacity .35s ease,
+        transform .35s ease;
+
 }
+
+
+.footer-column a::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -5px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: #d4af37;
+
+    transition:
+        width .4s cubic-bezier(.16,1,.3,1);
+
+}
+
 
 .footer-column a:hover {
-    color: var(--gold);
-    transform: translateX(7px);
-    letter-spacing: .04em;
+
+    color: white;
+
+    transform:
+        translateX(6px);
+
 }
 
+
 .footer-column a:hover::before {
+
+    width: calc(100% - 15px);
+
+}
+
+
+.footer-column a:hover span {
+
     opacity: 1;
 
     transform:
-        translate(0,0)
-        scale(1);
+        translate(0,0);
+
 }
 
-.footer-brand {
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.footer-newsletter {
+
+    position: relative;
+
+}
+
+
+.newsletter-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+}
+
+
+.newsletter-line {
+
+    width: 24px;
+
+    height: 1px;
+
+    background: #d4af37;
+
     transition:
-        transform .8s var(--ease);
+        width .4s ease;
+
 }
 
-.footer-brand:hover {
+
+.footer-newsletter:hover .newsletter-line {
+
+    width: 45px;
+
+}
+
+
+.footer-newsletter h3 {
+
+    margin: 0 0 14px;
+
+    color: white;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    letter-spacing: -.5px;
+
+}
+
+
+.footer-newsletter p {
+
+    max-width: 340px;
+
+    margin-bottom: 22px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   EMAIL FORM
+========================================================= */
+
+.footer-form {
+
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+
+    max-width: 360px;
+
+    height: 52px;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.22);
+
+    transition:
+        border-color .4s ease;
+
+}
+
+
+.footer-form:focus-within {
+
+    border-color: #d4af37;
+
+}
+
+
+.footer-form input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 1.2px;
+
+}
+
+
+.footer-form input::placeholder {
+
+    color:
+        rgba(255,255,255,.35);
+
+}
+
+
+.footer-form button {
+
+    position: relative;
+
+    width: 42px;
+
+    height: 42px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #090a0a;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        transform .4s cubic-bezier(.16,1,.3,1),
+        background .4s ease,
+        color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.footer-form button::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #d4af37;
+
     transform:
-        translateY(-5px);
+        scale(0);
+
+    border-radius: 50%;
+
+    transition:
+        transform .4s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.footer-form button i {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 13px;
+
+}
+
+
+.footer-form button:hover {
+
+    transform:
+        rotate(45deg)
+        scale(1.08);
+
+    color: white;
+
+    box-shadow:
+        0 0 25px
+        rgba(212,175,55,.3);
+
+}
+
+
+.footer-form button:hover::before {
+
+    transform:
+        scale(1);
+
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.footer-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    margin-top: 65px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.12),
+            #d4af37,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+    opacity: .5;
+
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.footer-bottom {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+}
+
+
+.copyright {
+
+    color:
+        rgba(255,255,255,.32);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* =========================================================
+   SOCIAL
+========================================================= */
+
+.footer-social {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.footer-social a {
+
+    position: relative;
+
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    border-radius: 50%;
+
+    color:
+        rgba(255,255,255,.55);
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        color .4s ease,
+        border-color .4s ease,
+        transform .4s cubic-bezier(.16,1,.3,1),
+        box-shadow .4s ease;
+
+}
+
+
+.footer-social a::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background: #d4af37;
+
+    transform:
+        scale(0);
+
+    transition:
+        transform .4s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.footer-social a i {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 12px;
+
+}
+
+
+.footer-social a:hover {
+
+    color: #080909;
+
+    border-color: #d4af37;
+
+    transform:
+        translateY(-5px)
+        rotate(8deg);
+
+    box-shadow:
+        0 10px 25px
+        rgba(212,175,55,.18);
+
+}
+
+
+.footer-social a:hover::before {
+
+    transform:
+        scale(1);
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.back-top {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    text-decoration: none;
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 7px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+
+    transition:
+        color .3s ease;
+
+}
+
+
+.back-top i {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    border-radius: 50%;
+
+    font-size: 11px;
+
+    transition:
+        transform .4s ease,
+        background .4s ease,
+        color .4s ease,
+        border-color .4s ease;
+
+}
+
+
+.back-top:hover {
+
+    color: white;
+
+}
+
+
+.back-top:hover i {
+
+    background: #d4af37;
+
+    color: #080909;
+
+    border-color: #d4af37;
+
+    transform:
+        translateY(-4px)
+        rotate(45deg);
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .footer-top {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .footer-newsletter {
+
+        grid-column:
+            1 / -1;
+
+        max-width: 500px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+
+        padding:
+            55px 25px 22px;
+
+    }
+
+
+    .footer-top {
+
+        grid-template-columns: 1fr;
+
+        gap: 38px;
+
+    }
+
+
+    .footer-brand {
+
+        max-width: 100%;
+
+    }
+
+
+    .footer-newsletter {
+
+        grid-column: auto;
+
+    }
+
+
+    .footer-newsletter h3 {
+
+        font-size: 25px;
+
+    }
+
+
+    .footer-divider {
+
+        margin-top: 45px;
+
+    }
+
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .footer-social {
+
+        order: 2;
+
+    }
+
+
+    .back-top {
+
+        order: 3;
+
+    }
+
 }
 
 
