@@ -2749,55 +2749,43 @@ body {
        CARDS
     ========================= */
 
-    .cards-wrapper {
-        position: absolute;
+/* =========================
+   TABLET CARDS
+========================= */
 
-        left: 50%;
+.cards-wrapper {
+    position: absolute;
 
-        right: auto !important;
+    right: -55px;
+    left: auto;
 
-        transform: translateX(-50%);
+    bottom: 88px;
 
-        bottom: 75px;
+    width: 430px;
 
-        width: calc(100% - 24px) !important;
+    z-index: 5;
 
-        max-width: 390px;
+    overflow: hidden;
+}
 
-        height: 125px;
+.trip-cards {
+    display: flex;
 
-        display: flex;
+    gap: 12px;
 
-        align-items: center;
+    width: max-content;
 
-        justify-content: center;
+    justify-content: flex-start;
+}
 
-        overflow: hidden;
+.trip-card {
+    flex: 0 0 105px;
 
-        z-index: 5;
-    }
+    width: 105px;
+    height: 155px;
 
-    .trip-cards {
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 6px;
-
-        width: max-content;
-
-        margin: 0 auto;
-    }
-
-    .trip-card {
-        width: 82px !important;
-        min-width: 82px !important;
-
-        flex: 0 0 82px !important;
-
-        height: 118px !important;
-    }
+    flex-shrink: 0;
+}
 
 
     /* =========================
