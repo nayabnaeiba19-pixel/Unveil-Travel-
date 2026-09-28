@@ -1959,3 +1959,269 @@ body {
     transform: translateY(0);
   }
 }
+/* =========================================================
+   FINAL MOBILE FIX - TYPE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        min-height: 78px;
+
+        height: 78px;
+
+        padding: 0 16px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar > .container-fluid {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* LOGO */
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+
+        gap: 7px;
+
+        font-size: 22px !important;
+
+        line-height: 1;
+
+        white-space: nowrap;
+
+        margin: 0;
+    }
+
+    .navbar .logo img {
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+    }
+
+    /* MENU BUTTON */
+
+    .navbar-toggler {
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+
+        border:
+            1px solid rgba(212,175,55,.35);
+
+        border-radius: 50%;
+
+        background:
+            rgba(255,255,255,.04);
+
+        flex-shrink: 0;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow:
+            0 0 0 2px rgba(212,175,55,.15);
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    /* ---------- MOBILE MENU ---------- */
+
+    .navbar-collapse {
+        position: absolute;
+
+        top: 78px;
+
+        left: 16px;
+        right: 16px;
+
+        margin-top: 0 !important;
+
+        padding: 18px !important;
+
+        border-radius: 18px;
+
+        background:
+            rgba(7,9,10,.97);
+
+        backdrop-filter: blur(28px);
+        -webkit-backdrop-filter: blur(28px);
+
+        border:
+            1px solid rgba(212,175,55,.12);
+
+        box-shadow:
+            0 25px 60px rgba(0,0,0,.45);
+
+        z-index: 2000;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        align-items: stretch !important;
+
+        gap: 2px !important;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+
+        padding: 12px 10px !important;
+
+        font-size: 9px;
+    }
+
+    .nav-actions {
+        width: 100%;
+
+        margin-top: 12px !important;
+
+        justify-content: center;
+    }
+
+    .search-btn {
+        display: none !important;
+    }
+
+
+    /* ---------- MAIN CONTENT ---------- */
+
+    .content {
+        width: 100%;
+
+        padding:
+            0 20px !important;
+
+        align-items: center;
+    }
+
+    .left-content {
+        width: 100% !important;
+
+        max-width: 330px;
+
+        margin-top: 0;
+    }
+
+    .left-content h1 {
+        font-size: 42px !important;
+
+        line-height: .95;
+    }
+
+    .description {
+        width: 100% !important;
+
+        max-width: 280px;
+
+        font-size: 10px;
+    }
+
+
+    /* ---------- CARDS ---------- */
+
+    .cards-wrapper {
+        position: absolute;
+
+        bottom: 75px !important;
+
+        right: 50% !important;
+
+        transform: translateX(50%);
+
+        width: 100% !important;
+
+        max-width: 360px;
+
+        height: 190px;
+
+        display: flex;
+
+        justify-content: center;
+
+        overflow: visible;
+
+        z-index: 5;
+    }
+
+    .trip-cards {
+        width: 100%;
+
+        max-width: 360px;
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        position: relative;
+
+        z-index: 5;
+    }
+
+    .trip-card {
+        flex-basis: 105px !important;
+
+        width: 105px;
+
+        height: 155px !important;
+
+        flex-shrink: 0;
+    }
+
+
+    /* ---------- KEEP CONTENT ABOVE CARDS ---------- */
+
+    .left-content,
+    .content,
+    .hero-content {
+        position: relative;
+
+        z-index: 20;
+    }
+
+
+    /* ---------- BOTTOM CONTROLS ---------- */
+
+    .bottom-controls {
+        position: absolute;
+
+        left: 18px !important;
+        right: 18px !important;
+
+        bottom: 18px !important;
+
+        z-index: 30;
+    }
+
+    .progress-line {
+        width: 100% !important;
+    }
+}
