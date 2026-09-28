@@ -2643,178 +2643,88 @@ body {
    376px - 425px
 ========================================================= */
 
-@media (min-width: 376px) and (max-width: 425px) {
+/* =========================================================
+   PHONE RESPONSIVE
+   425px AND BELOW
+========================================================= */
 
-    .navbar {
-        height: 72px;
-        min-height: 72px;
-
-        padding: 0 14px;
-    }
-
-    .navbar > .container-fluid {
-        width: 100%;
-        height: 72px;
-
-        padding: 0 !important;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .navbar .logo {
-        display: flex;
-        align-items: center;
-
-        gap: 6px;
-
-        font-size: 20px !important;
-
-        white-space: nowrap;
-    }
-
-    .navbar .logo img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .navbar-toggler {
-        width: 41px;
-        height: 41px;
-
-        flex-shrink: 0;
-    }
-
-
-    /* MENU */
-
-    .navbar-collapse {
-        position: absolute;
-
-        top: 72px;
-
-        left: 12px;
-        right: 12px;
-
-        width: auto;
-
-        margin: 0 !important;
-
-        padding: 15px !important;
-
-        border-radius: 17px;
-
-        background: rgba(7,9,10,.97);
-
-        backdrop-filter: blur(25px);
-
-        border: 1px solid rgba(255,255,255,.08);
-
-        z-index: 9999;
-    }
-
-    .navbar-nav {
-        width: 100%;
-
-        gap: 2px;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 10px 8px;
-
-        font-size: 8px;
-    }
-
-    .nav-actions {
-        width: 100%;
-
-        margin-top: 10px;
-
-        justify-content: center;
-    }
-
-    .search-btn {
-        display: none;
-    }
-
+@media (max-width: 425px) {
 
     /* =========================
-       MAIN
+       MAIN CONTENT
     ========================= */
 
     .content {
-        width: 100%;
-
+        width: 100% !important;
         height: 100vh;
 
-        padding:
-            0 18px;
+        padding: 0 18px !important;
 
         display: flex;
-
-        align-items: center !important;
+        align-items: flex-start !important;
 
         position: relative;
     }
 
-
-    /* TEXT */
+    /* =========================
+       TEXT + BUTTON
+    ========================= */
 
     .left-content {
-        width: 285px;
+        width: 100% !important;
+        max-width: 290px;
 
-        margin-top: -45px;
+        position: absolute;
 
-        position: relative;
+        /*
+           از Header فاصله دارد
+           و قبل از کارت‌ها قرار می‌گیرد
+        */
+        top: 25%;
+
+        left: 18px;
+
+        margin: 0 !important;
 
         z-index: 30;
     }
 
-    .small-line {
-        width: 18px;
-        height: 2px;
-
-        margin-bottom: 7px;
-    }
-
     .category {
-        font-size: 10px;
+        font-size: 10px !important;
 
-        margin-bottom: 8px;
+        margin-bottom: 8px !important;
     }
 
     .left-content h1 {
         font-size: 35px !important;
 
-        line-height: .94;
-
-        letter-spacing: -.5px;
+        line-height: .95;
 
         margin-bottom: 9px !important;
     }
 
     .description {
-        width: 265px;
+        width: 260px !important;
 
-        max-width: 265px;
+        max-width: 260px;
 
         font-size: 8px !important;
 
-        line-height: 1.5;
+        line-height: 1.55;
 
-        margin-bottom: 11px !important;
+        margin-bottom: 12px !important;
     }
 
-
-    /* BUTTONS */
+    /* =========================
+       BUTTON
+    ========================= */
 
     .discover-area {
-        gap: 8px;
-
         display: flex;
 
         align-items: center;
+
+        gap: 8px;
     }
 
     .bookmark {
@@ -2829,11 +2739,9 @@ body {
     .discover-btn {
         height: 28px;
 
-        padding: 0 13px;
+        padding: 0 14px;
 
         font-size: 7px;
-
-        letter-spacing: .3px;
     }
 
 
@@ -2844,15 +2752,25 @@ body {
     .cards-wrapper {
         position: absolute;
 
-        right: 50%;
+        left: 50%;
 
-        bottom: 72px;
+        right: auto !important;
 
-        transform: translateX(50%);
+        transform: translateX(-50%);
 
-        width: 355px;
+        bottom: 75px;
 
-        max-width: calc(100% - 30px);
+        width: calc(100% - 24px) !important;
+
+        max-width: 390px;
+
+        height: 125px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
 
         overflow: hidden;
 
@@ -2860,7 +2778,12 @@ body {
     }
 
     .trip-cards {
-        gap: 7px;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
 
         width: max-content;
 
@@ -2868,42 +2791,12 @@ body {
     }
 
     .trip-card {
-        flex: 0 0 82px;
+        width: 82px !important;
+        min-width: 82px !important;
 
-        width: 82px;
+        flex: 0 0 82px !important;
 
-        height: 118px;
-
-        border-radius: 6px;
-    }
-
-
-    /* CARD TEXT */
-
-    .card-info {
-        left: 7px;
-        right: 6px;
-
-        bottom: 7px;
-    }
-
-    .card-line {
-        width: 15px;
-        height: 2px;
-
-        margin-bottom: 3px;
-    }
-
-    .card-location {
-        font-size: 6px;
-
-        margin-bottom: 1px;
-    }
-
-    .card-title {
-        font-size: 11px;
-
-        line-height: 1;
+        height: 118px !important;
     }
 
 
@@ -2912,213 +2805,13 @@ body {
     ========================= */
 
     .bottom-controls {
-        left: 14px;
-        right: 14px;
+        position: absolute;
 
-        bottom: 12px;
+        left: 14px !important;
+        right: 14px !important;
+
+        bottom: 12px !important;
 
         z-index: 100;
-
-        display: flex;
-        align-items: center;
-    }
-
-    .arrows {
-        gap: 6px;
-    }
-
-    .arrows button {
-        width: 34px;
-        height: 34px;
-    }
-
-    .progress-area {
-        margin-left: 10px;
-    }
-
-    .progress-line {
-        width: 100%;
-    }
-}
-
-
-
-/* =========================================================
-   SMALL PHONE
-   375px AND BELOW
-========================================================= */
-
-@media (max-width: 375px) {
-
-    .navbar {
-        height: 68px;
-        min-height: 68px;
-
-        padding: 0 12px;
-    }
-
-    .navbar > .container-fluid {
-        height: 68px;
-
-        padding: 0 !important;
-    }
-
-    .navbar .logo {
-        font-size: 18px !important;
-
-        gap: 5px;
-    }
-
-    .navbar .logo img {
-        width: 32px;
-        height: 32px;
-    }
-
-    .navbar-toggler {
-        width: 38px;
-        height: 38px;
-    }
-
-
-    .navbar-collapse {
-        top: 68px;
-
-        left: 10px;
-        right: 10px;
-
-        padding: 13px !important;
-    }
-
-
-    /* CONTENT */
-
-    .content {
-        height: 100vh;
-
-        padding: 0 14px;
-
-        align-items: center !important;
-    }
-
-    .left-content {
-        width: 270px;
-
-        margin-top: -35px;
-
-        z-index: 30;
-    }
-
-    .category {
-        font-size: 9px;
-    }
-
-    .left-content h1 {
-        font-size: 31px !important;
-
-        margin-bottom: 8px !important;
-    }
-
-    .description {
-        width: 245px;
-
-        font-size: 7.5px !important;
-
-        line-height: 1.5;
-
-        margin-bottom: 10px !important;
-    }
-
-    .discover-area {
-        gap: 7px;
-    }
-
-    .bookmark {
-        width: 23px;
-        height: 23px;
-    }
-
-    .discover-btn {
-        height: 26px;
-
-        padding: 0 11px;
-
-        font-size: 6.5px;
-    }
-
-
-    /* CARDS */
-
-    .cards-wrapper {
-        right: 50%;
-
-        bottom: 68px;
-
-        transform: translateX(50%);
-
-        width: 320px;
-
-        max-width: calc(100% - 20px);
-
-        overflow: hidden;
-
-        z-index: 5;
-    }
-
-    .trip-cards {
-        gap: 5px;
-    }
-
-    .trip-card {
-        flex: 0 0 72px;
-
-        width: 72px;
-
-        height: 105px;
-    }
-
-
-    .card-info {
-        left: 6px;
-        right: 5px;
-
-        bottom: 6px;
-    }
-
-    .card-line {
-        width: 13px;
-        height: 2px;
-
-        margin-bottom: 3px;
-    }
-
-    .card-location {
-        font-size: 5px;
-    }
-
-    .card-title {
-        font-size: 9px;
-    }
-
-
-    /* CONTROLS */
-
-    .bottom-controls {
-        left: 10px;
-        right: 10px;
-
-        bottom: 10px;
-    }
-
-    .arrows {
-        gap: 5px;
-    }
-
-    .arrows button {
-        width: 31px;
-        height: 31px;
-    }
-
-    .progress-area {
-        margin-left: 8px;
     }
 }
