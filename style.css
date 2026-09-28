@@ -2509,3 +2509,245 @@ body {
     transform: translateY(0);
   }
 }
+/* =========================================================
+   FINAL MOBILE FIX - INDEX
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* ---------- NAVBAR ---------- */
+
+    .navbar {
+        height: 78px;
+        min-height: 78px;
+
+        padding: 0 16px;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar > .container-fluid {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* LOGO */
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        gap: 7px;
+
+        font-size: 22px !important;
+        line-height: 1;
+
+        white-space: nowrap;
+
+        margin: 0;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+
+        flex-shrink: 0;
+    }
+
+    /* MOBILE MENU BUTTON */
+
+    .navbar-toggler {
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+
+        border: 1px solid rgba(216,196,155,.35);
+
+        border-radius: 50%;
+
+        background: rgba(255,255,255,.04);
+
+        box-shadow:
+            0 0 20px rgba(0,0,0,.2);
+
+        flex-shrink: 0;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow:
+            0 0 0 2px rgba(216,196,155,.15);
+    }
+
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    /* ---------- MOBILE MENU ---------- */
+
+    .navbar-collapse {
+        position: absolute;
+
+        top: 78px;
+        left: 16px;
+        right: 16px;
+
+        margin: 0 !important;
+
+        padding: 18px !important;
+
+        border-radius: 18px;
+
+        background:
+            rgba(5,7,8,.97);
+
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+
+        border:
+            1px solid rgba(216,196,155,.12);
+
+        box-shadow:
+            0 25px 60px rgba(0,0,0,.45);
+
+        z-index: 2000;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        gap: 3px !important;
+
+        align-items: stretch;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+
+        padding: 12px 10px !important;
+
+        font-size: 9px;
+    }
+
+    .nav-actions {
+        width: 100%;
+
+        margin-top: 12px !important;
+
+        justify-content: center;
+    }
+
+
+    /* ---------- HERO CONTENT ---------- */
+
+    .cards-wrapper {
+        top: 37%;
+        height: 330px;
+
+        overflow: visible;
+    }
+
+    .destination-card {
+        width: 180px;
+        height: 260px;
+    }
+
+
+    /* SIDE CARDS */
+
+    .destination-card[data-position="0"] {
+        transform:
+            translate(-50%, -50%)
+            translateX(-210px)
+            translateY(30px)
+            rotateY(22deg)
+            scale(.55);
+    }
+
+    .destination-card[data-position="1"] {
+        transform:
+            translate(-50%, -50%)
+            translateX(-108px)
+            translateY(10px)
+            rotateY(14deg)
+            scale(.68);
+    }
+
+    /* CENTER CARD */
+
+    .destination-card[data-position="2"] {
+        transform:
+            translate(-50%, -50%)
+            translateX(0)
+            translateY(0)
+            scale(.82);
+
+        z-index: 5;
+    }
+
+    .destination-card[data-position="3"] {
+        transform:
+            translate(-50%, -50%)
+            translateX(108px)
+            translateY(10px)
+            rotateY(-14deg)
+            scale(.68);
+    }
+
+    .destination-card[data-position="4"] {
+        transform:
+            translate(-50%, -50%)
+            translateX(210px)
+            translateY(30px)
+            rotateY(-22deg)
+            scale(.55);
+    }
+
+
+    /* ---------- TEXT ---------- */
+
+    .center-content {
+        top: 65% !important;
+
+        width: 90% !important;
+
+        z-index: 20;
+    }
+
+    .center-content h1 {
+        font-size: 45px !important;
+    }
+
+    .center-content p {
+        font-size: 9px !important;
+    }
+
+    .explore-button {
+        margin-top: 16px !important;
+    }
+
+
+    /* ---------- SLIDER ---------- */
+
+    .slider-controls {
+        bottom: 4% !important;
+
+        z-index: 30;
+    }
+}
