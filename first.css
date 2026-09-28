@@ -2714,36 +2714,65 @@ body::after {
    SEARCH BUTTON
 ========================================================= */
 
+/* =========================================================
+   SEARCH BUTTON
+========================================================= */
+
 .search-btn {
     position: relative;
     isolation: isolate;
     overflow: hidden;
 
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border-radius: 50%;
+    border: 1px solid rgba(216, 196, 155, 0.35);
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #fff;
+
+    cursor: pointer;
+
     transition:
         transform .5s var(--ease),
+        background .5s ease,
         border-color .5s ease,
         box-shadow .5s ease;
 }
+
+
+/* GOLD ROTATING LIGHT */
 
 .search-btn::before {
     content: "";
 
     position: absolute;
-    inset: -80%;
+    inset: -70%;
 
     background:
         conic-gradient(
             from 0deg,
-            transparent,
-            rgba(216,196,155,.55),
-            transparent 30%
+            transparent 0%,
+            rgba(216, 196, 155, 0.55) 20%,
+            transparent 35%,
+            transparent 100%
         );
 
-    animation:
-        magicRotate 4s linear infinite;
+    animation: magicRotate 4s linear infinite;
 
     z-index: -2;
 }
+
+
+/* INNER GLASS */
 
 .search-btn::after {
     content: "";
@@ -2751,36 +2780,49 @@ body::after {
     position: absolute;
     inset: 2px;
 
-    border-radius: inherit;
+    border-radius: 50%;
 
-    background: #080808;
+    background: rgba(8, 8, 8, 0.55);
 
     z-index: -1;
 }
 
-.search-btn:hover {
-    transform:
-        translateY(-4px)
-        rotate(8deg)
-        scale(1.08);
 
-    border-color: var(--gold);
-
-    box-shadow:
-        0 0 0 1px rgba(216,196,155,.25),
-        0 10px 35px rgba(216,196,155,.2),
-        0 0 45px rgba(216,196,155,.12);
-}
+/* ICON */
 
 .search-btn i {
+    position: relative;
+    z-index: 2;
+
+    color: #fff;
+
+    font-size: 16px;
+
     transition:
-        transform .7s var(--ease);
+        transform .5s var(--ease),
+        color .3s ease;
 }
 
+
+/* HOVER */
+
+.search-btn:hover {
+    transform: translateY(-3px) scale(1.08);
+
+    border-color: #d8c49b;
+
+    background: rgba(216, 196, 155, 0.08);
+
+    box-shadow:
+        0 0 0 1px rgba(216, 196, 155, 0.2),
+        0 10px 30px rgba(216, 196, 155, 0.18);
+}
+
+
 .search-btn:hover i {
-    transform:
-        rotate(180deg)
-        scale(1.15);
+    color: #d8c49b;
+
+    transform: rotate(180deg) scale(1.1);
 }
 
 
