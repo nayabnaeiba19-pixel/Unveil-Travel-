@@ -2228,14 +2228,8 @@ body {
 /* =========================================================
    425px MOBILE FIX - TYPE PAGE
 ========================================================= */
-
 /* =========================================================
-   TYPE PAGE
-   FINAL 425px MOBILE LAYOUT
-========================================================= */
-/* =========================================================
-   TYPE PAGE
-   FINAL 425px MOBILE LAYOUT
+   FINAL 425px MOBILE FIX
 ========================================================= */
 
 @media (max-width: 425px) {
@@ -2248,6 +2242,9 @@ body {
         height: 72px;
         min-height: 72px;
         padding: 0 14px;
+
+        display: flex;
+        align-items: center;
     }
 
     .navbar > .container-fluid {
@@ -2257,6 +2254,9 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 
     .navbar .logo {
@@ -2269,7 +2269,6 @@ body {
         line-height: 1;
 
         margin: 0;
-
         white-space: nowrap;
     }
 
@@ -2310,7 +2309,6 @@ body {
         position: absolute;
 
         top: 72px;
-
         left: 12px;
         right: 12px;
 
@@ -2344,24 +2342,33 @@ body {
         justify-content: center;
     }
 
+    .search-btn {
+        display: none !important;
+    }
+
 
     /* =========================
        MAIN CONTENT
+       مهم: دوباره وسط صفحه
     ========================= */
 
     .content {
         width: 100% !important;
 
+        height: 100vh;
+
         padding-left: 18px !important;
         padding-right: 18px !important;
 
         display: flex;
-        align-items: flex-start !important;
 
-        position: relative;
-
-        z-index: 30;
+        align-items: center !important;
     }
+
+
+    /* =========================
+       TEXT
+    ========================= */
 
     .left-content {
         width: 100% !important;
@@ -2374,64 +2381,72 @@ body {
 
         z-index: 40;
 
-        /* فقط کمی بالاتر از جای اصلی */
-        transform: translateY(-3px);
+        /* فقط کمی بالاتر از حالت اصلی */
+        transform: translateY(-12px);
     }
 
 
-    /* =========================
-       TITLE
-    ========================= */
+    .small-line {
+        margin-bottom: 8px;
+    }
+
+
+    .category {
+        font-size: 11px;
+
+        margin-bottom: 10px;
+    }
+
 
     .left-content h1 {
-        font-size: 34px !important;
+        font-size: 38px !important;
 
         line-height: .95;
 
-        margin-bottom: 9px !important;
+        margin-bottom: 10px !important;
     }
 
-
-    /* =========================
-       DESCRIPTION
-    ========================= */
 
     .description {
         width: 100% !important;
 
-        max-width: 260px;
+        max-width: 270px;
 
-        font-size: 8px !important;
+        font-size: 8.5px !important;
 
         line-height: 1.55;
 
-        margin-bottom: 0 !important;
+        margin-bottom: 12px !important;
     }
 
 
     /* =========================
-       BOOK BUTTON
+       DISCOVER BUTTONS
     ========================= */
 
-    .luxury-book {
-        position: relative;
-
-        z-index: 50;
-
-        display: inline-flex !important;
+    .discover-area {
+        display: flex;
 
         align-items: center;
-        justify-content: center;
 
-        margin-top: 12px !important;
+        gap: 9px;
+    }
 
-        padding: 9px 18px !important;
+    .bookmark {
+        width: 25px;
+        height: 25px;
+    }
 
-        font-size: 8px !important;
+    .bookmark i {
+        font-size: 10px;
+    }
 
-        line-height: 1;
+    .discover-btn {
+        height: 29px;
 
-        white-space: nowrap;
+        padding: 0 14px;
+
+        font-size: 8px;
     }
 
 
@@ -2442,28 +2457,28 @@ body {
     .cards-wrapper {
         position: absolute;
 
+        right: 50% !important;
+
+        bottom: 92px !important;
+
+        transform: translateX(50%);
+
         width: 100% !important;
 
         max-width: 360px;
 
-        height: 145px;
-
-        right: 50% !important;
-
-        bottom: 112px !important;
-
-        transform: translateX(50%);
+        height: 135px;
 
         display: flex;
 
-        justify-content: center;
-
         align-items: center;
+        justify-content: center;
 
         overflow: visible;
 
         z-index: 5;
     }
+
 
     .trip-cards {
         width: 100%;
@@ -2472,42 +2487,59 @@ body {
 
         display: flex;
 
-        justify-content: center;
         align-items: center;
+        justify-content: center;
 
         gap: 6px;
 
         position: relative;
-
-        z-index: 5;
     }
 
 
-    /* =========================
-       SMALLER CARDS
-    ========================= */
+    /* کوتاه‌تر شدن کارت‌ها */
 
     .trip-card {
-        width: 86px !important;
+        width: 84px !important;
 
-        min-width: 86px !important;
+        min-width: 84px !important;
 
-        flex-basis: 86px !important;
+        flex-basis: 84px !important;
 
-        height: 125px !important;
+        height: 120px !important;
 
         flex-shrink: 0;
     }
 
 
     /* =========================
-       LAYERING
+       CARD TEXT
     ========================= */
 
-    .content,
-    .left-content,
-    .luxury-book {
-        z-index: 40;
+    .card-info {
+        left: 8px;
+        right: 6px;
+
+        bottom: 8px;
+    }
+
+    .card-line {
+        width: 16px;
+
+        height: 2px;
+
+        margin-bottom: 4px;
+    }
+
+    .card-location {
+        font-size: 6px;
+
+        margin-bottom: 1px;
+    }
+
+    .card-title {
+        font-size: 12px;
+
+        line-height: 1;
     }
 
 
@@ -2529,4 +2561,5 @@ body {
     .progress-line {
         width: 100% !important;
     }
+
 }
