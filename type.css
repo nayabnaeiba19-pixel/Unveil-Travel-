@@ -2229,6 +2229,11 @@ body {
    425px MOBILE FIX - TYPE PAGE
 ========================================================= */
 
+/* =========================================================
+   TYPE PAGE
+   FINAL 425px MOBILE LAYOUT
+========================================================= */
+
 @media (max-width: 425px) {
 
     /* =========================
@@ -2242,8 +2247,8 @@ body {
     }
 
     .navbar > .container-fluid {
-        height: 72px;
         width: 100%;
+        height: 72px;
 
         display: flex;
         align-items: center;
@@ -2260,6 +2265,7 @@ body {
         line-height: 1;
 
         margin: 0;
+
         white-space: nowrap;
     }
 
@@ -2293,13 +2299,14 @@ body {
 
 
     /* =========================
-       MOBILE NAV MENU
+       MOBILE MENU
     ========================= */
 
     .navbar-collapse {
         position: absolute;
 
         top: 72px;
+
         left: 12px;
         right: 12px;
 
@@ -2314,7 +2321,6 @@ body {
 
     .navbar-nav {
         width: 100%;
-
         gap: 2px !important;
     }
 
@@ -2346,61 +2352,108 @@ body {
         padding-right: 18px !important;
 
         display: flex;
-        align-items: center;
-    }
-
-    .left-content {
-        width: 100% !important;
-
-        max-width: 320px;
-
-        margin-top: 0 !important;
+        align-items: flex-start !important;
 
         position: relative;
 
         z-index: 30;
     }
 
-    .left-content h1 {
-        font-size: 40px !important;
-
-        line-height: .95;
-
-        margin-bottom: 12px;
-    }
-
-    .description {
+    .left-content {
         width: 100% !important;
 
-        max-width: 285px;
+        max-width: 300px;
 
-        font-size: 9px !important;
+        margin-top: 0 !important;
 
-        line-height: 1.6;
+        position: relative;
+
+        z-index: 40;
+
+        transform: translateY(-18px);
     }
 
 
     /* =========================
-       CARDS
+       TITLE
+    ========================= */
+
+    .left-content h1 {
+        font-size: 34px !important;
+
+        line-height: .95;
+
+        margin-bottom: 9px !important;
+    }
+
+
+    /* =========================
+       DESCRIPTION
+    ========================= */
+
+    .description {
+        width: 100% !important;
+
+        max-width: 260px;
+
+        font-size: 8px !important;
+
+        line-height: 1.55;
+
+        margin-bottom: 0 !important;
+    }
+
+
+    /* =========================
+       BOOK BUTTON
+    ========================= */
+
+    .luxury-book {
+        position: relative;
+
+        z-index: 50;
+
+        display: inline-flex !important;
+
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 12px !important;
+
+        padding: 9px 18px !important;
+
+        font-size: 8px !important;
+
+        line-height: 1;
+
+        white-space: nowrap;
+    }
+
+
+    /* =========================
+       CARDS AREA
     ========================= */
 
     .cards-wrapper {
         position: absolute;
 
         width: 100% !important;
-        max-width: 390px;
 
-        height: 170px;
+        max-width: 360px;
+
+        height: 145px;
 
         right: 50% !important;
 
-        bottom: 92px !important;
+        bottom: 112px !important;
 
         transform: translateX(50%);
 
         display: flex;
 
         justify-content: center;
+
+        align-items: center;
 
         overflow: visible;
 
@@ -2410,28 +2463,33 @@ body {
     .trip-cards {
         width: 100%;
 
-        max-width: 390px;
+        max-width: 360px;
 
         display: flex;
 
-        align-items: center;
         justify-content: center;
+        align-items: center;
 
-        gap: 7px;
+        gap: 6px;
 
         position: relative;
 
         z-index: 5;
     }
 
+
+    /* =========================
+       SMALLER CARDS
+    ========================= */
+
     .trip-card {
-        width: 94px !important;
+        width: 86px !important;
 
-        min-width: 94px !important;
+        min-width: 86px !important;
 
-        flex-basis: 94px !important;
+        flex-basis: 86px !important;
 
-        height: 145px !important;
+        height: 125px !important;
 
         flex-shrink: 0;
     }
@@ -2442,27 +2500,9 @@ body {
     ========================= */
 
     .content,
-    .left-content {
-        position: relative;
-
-        z-index: 30;
-    }
-
-
-    /* =========================
-       BUTTON
-    ========================= */
-
+    .left-content,
     .luxury-book {
-        position: relative;
-
         z-index: 40;
-
-        margin-top: 18px !important;
-
-        padding: 10px 20px !important;
-
-        font-size: 9px;
     }
 
 
@@ -2478,7 +2518,7 @@ body {
 
         bottom: 15px !important;
 
-        z-index: 50;
+        z-index: 100;
     }
 
     .progress-line {
