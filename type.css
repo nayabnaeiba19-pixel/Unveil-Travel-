@@ -2851,3 +2851,57 @@ body {
         height: 155px !important;
     }
 }
+/* =========================================================
+   PHONE ONLY FIX
+   DOES NOT AFFECT TABLET
+========================================================= */
+
+@media (max-width: 425px) {
+
+    .cards-wrapper {
+        position: absolute !important;
+
+        left: 50% !important;
+        right: auto !important;
+
+        transform: translateX(-50%) !important;
+
+        bottom: 75px !important;
+
+        width: calc(100% - 24px) !important;
+        max-width: 360px !important;
+
+        height: 125px !important;
+
+        overflow: hidden !important;
+
+        z-index: 5 !important;
+    }
+
+    .trip-cards {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 6px !important;
+
+        width: max-content !important;
+        max-width: none !important;
+
+        margin: 0 auto !important;
+
+        transform: none !important;
+    }
+
+    .trip-card {
+        flex: 0 0 82px !important;
+
+        width: 82px !important;
+        min-width: 82px !important;
+
+        height: 118px !important;
+
+        flex-shrink: 0 !important;
+    }
+}
