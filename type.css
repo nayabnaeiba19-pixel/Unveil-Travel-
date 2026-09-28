@@ -2229,19 +2229,204 @@ body {
    425px MOBILE FIX - TYPE PAGE
 ========================================================= */
 /* =========================================================
-   FINAL 425px MOBILE FIX
+   FINAL RESPONSIVE
+   TYPE PAGE
 ========================================================= */
 
-@media (max-width: 425px) {
 
-    /* =========================
-       NAVBAR
-    ========================= */
+/* =========================================================
+   TABLET
+   769px - 991px
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 991px) {
 
     .navbar {
-        height: 72px;
-        min-height: 72px;
-        padding: 0 14px;
+        min-height: 85px;
+        height: 85px;
+
+        padding: 0 28px;
+    }
+
+    .navbar > .container-fluid {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar .logo {
+        font-size: 25px;
+        gap: 7px;
+
+        white-space: nowrap;
+    }
+
+    .navbar .logo img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .navbar-toggler {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    /* MOBILE NAV */
+
+    .navbar-collapse {
+        position: absolute;
+
+        top: 85px;
+        left: 25px;
+        right: 25px;
+
+        width: auto;
+
+        padding: 18px !important;
+
+        margin: 0 !important;
+
+        border-radius: 20px;
+
+        background: rgba(7,9,10,.95);
+
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+
+        border: 1px solid rgba(255,255,255,.08);
+
+        box-shadow:
+            0 25px 60px rgba(0,0,0,.45);
+
+        z-index: 2000;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        align-items: stretch;
+
+        gap: 2px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 13px 12px;
+
+        font-size: 9px;
+    }
+
+    .nav-actions {
+        width: 100%;
+
+        margin-top: 12px;
+
+        justify-content: center;
+    }
+
+
+    /* MAIN CONTENT */
+
+    .content {
+        height: 100vh;
+
+        padding-left: 45px;
+        padding-right: 30px;
+
+        align-items: center;
+    }
+
+    .left-content {
+        width: 320px;
+
+        margin-top: 20px;
+
+        position: relative;
+        z-index: 20;
+    }
+
+    .left-content h1 {
+        font-size: 50px;
+
+        line-height: .97;
+
+        margin-bottom: 14px;
+    }
+
+    .category {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .description {
+        max-width: 300px;
+
+        font-size: 9px;
+
+        line-height: 1.5;
+
+        margin-bottom: 15px;
+    }
+
+    .discover-area {
+        gap: 10px;
+    }
+
+
+    /* CARDS */
+
+    .cards-wrapper {
+        right: 15px;
+
+        bottom: 95px;
+
+        width: 500px;
+
+        z-index: 5;
+    }
+
+    .trip-cards {
+        gap: 15px;
+    }
+
+    .trip-card {
+        flex: 0 0 120px;
+
+        height: 180px;
+    }
+
+
+    /* BOTTOM */
+
+    .bottom-controls {
+        left: 30px;
+        right: 30px;
+
+        bottom: 15px;
+
+        z-index: 50;
+    }
+
+    .progress-line {
+        width: 100%;
+    }
+}
+
+
+
+/* =========================================================
+   MOBILE
+   426px - 768px
+========================================================= */
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    .navbar {
+        height: 76px;
+        min-height: 76px;
+
+        padding: 0 20px;
 
         display: flex;
         align-items: center;
@@ -2249,14 +2434,233 @@ body {
 
     .navbar > .container-fluid {
         width: 100%;
-        height: 72px;
+        height: 76px;
 
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding: 0 !important;
+    }
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+
+        gap: 7px;
+
+        font-size: 23px;
+
+        white-space: nowrap;
+    }
+
+    .navbar .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-toggler {
+        width: 44px;
+        height: 44px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* MENU */
+
+    .navbar-collapse {
+        position: absolute;
+
+        top: 76px;
+        left: 18px;
+        right: 18px;
+
+        width: auto;
+
+        margin: 0 !important;
+
+        padding: 18px !important;
+
+        border-radius: 18px;
+
+        background: rgba(7,9,10,.96);
+
+        backdrop-filter: blur(25px);
+
+        border: 1px solid rgba(255,255,255,.08);
+
+        z-index: 9999;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        gap: 2px;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+
+        padding: 12px 10px;
+
+        font-size: 9px;
+    }
+
+    .nav-actions {
+        width: 100%;
+
+        margin-top: 12px;
+
+        justify-content: center;
+    }
+
+    .search-btn {
+        display: none;
+    }
+
+
+    /* CONTENT */
+
+    .content {
+        width: 100%;
+
+        height: 100vh;
+
+        padding:
+            0 30px;
+
+        display: flex;
+
+        align-items: center;
+
+        position: relative;
+    }
+
+    .left-content {
+        width: 310px;
+
+        margin-top: -5px;
+
+        position: relative;
+
+        z-index: 30;
+    }
+
+    .small-line {
+        margin-bottom: 8px;
+    }
+
+    .category {
+        font-size: 12px;
+
+        margin-bottom: 10px;
+    }
+
+    .left-content h1 {
+        font-size: 43px;
+
+        line-height: .96;
+
+        margin-bottom: 12px;
+    }
+
+    .description {
+        width: 285px;
+
+        font-size: 9px;
+
+        line-height: 1.55;
+
+        margin-bottom: 14px;
+    }
+
+    .discover-area {
+        gap: 10px;
+    }
+
+    .bookmark {
+        width: 27px;
+        height: 27px;
+    }
+
+    .discover-btn {
+        height: 30px;
+
+        padding: 0 15px;
+
+        font-size: 8px;
+    }
+
+
+    /* CARDS */
+
+    .cards-wrapper {
+        right: 15px;
+
+        bottom: 88px;
+
+        width: 450px;
+
+        z-index: 5;
+    }
+
+    .trip-cards {
+        gap: 12px;
+    }
+
+    .trip-card {
+        flex: 0 0 105px;
+
+        height: 155px;
+    }
+
+
+    /* CONTROLS */
+
+    .bottom-controls {
+        left: 20px;
+        right: 20px;
+
+        bottom: 15px;
+
+        z-index: 100;
+    }
+
+    .progress-area {
+        margin-left: 15px;
+    }
+
+    .progress-line {
+        width: 100%;
+    }
+}
+
+
+
+/* =========================================================
+   PHONE
+   376px - 425px
+========================================================= */
+
+@media (min-width: 376px) and (max-width: 425px) {
+
+    .navbar {
+        height: 72px;
+        min-height: 72px;
+
+        padding: 0 14px;
+    }
+
+    .navbar > .container-fluid {
+        width: 100%;
+        height: 72px;
+
+        padding: 0 !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .navbar .logo {
@@ -2265,171 +2669,152 @@ body {
 
         gap: 6px;
 
-        font-size: 21px !important;
-        line-height: 1;
+        font-size: 20px !important;
 
-        margin: 0;
         white-space: nowrap;
     }
 
     .navbar .logo img {
-        width: 36px;
-        height: 36px;
-
-        flex-shrink: 0;
+        width: 35px;
+        height: 35px;
     }
 
     .navbar-toggler {
-        width: 42px;
-        height: 42px;
-
-        padding: 0;
-        margin: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 41px;
+        height: 41px;
 
         flex-shrink: 0;
-
-        border-radius: 50%;
-    }
-
-    .navbar-toggler-icon {
-        width: 19px;
-        height: 19px;
     }
 
 
-    /* =========================
-       MOBILE MENU
-    ========================= */
+    /* MENU */
 
     .navbar-collapse {
         position: absolute;
 
         top: 72px;
+
         left: 12px;
         right: 12px;
 
         width: auto;
 
-        padding: 16px !important;
+        margin: 0 !important;
 
-        border-radius: 16px;
+        padding: 15px !important;
+
+        border-radius: 17px;
+
+        background: rgba(7,9,10,.97);
+
+        backdrop-filter: blur(25px);
+
+        border: 1px solid rgba(255,255,255,.08);
 
         z-index: 9999;
     }
 
     .navbar-nav {
         width: 100%;
-        gap: 2px !important;
+
+        gap: 2px;
     }
 
     .navbar-nav .nav-link {
-        width: 100%;
+        padding: 10px 8px;
 
-        padding: 11px 8px !important;
-
-        font-size: 9px;
+        font-size: 8px;
     }
 
     .nav-actions {
         width: 100%;
 
-        margin-top: 10px !important;
+        margin-top: 10px;
 
         justify-content: center;
     }
 
     .search-btn {
-        display: none !important;
+        display: none;
     }
 
 
     /* =========================
-       MAIN CONTENT
-       مهم: دوباره وسط صفحه
+       MAIN
     ========================= */
 
     .content {
-        width: 100% !important;
+        width: 100%;
 
         height: 100vh;
 
-        padding-left: 18px !important;
-        padding-right: 18px !important;
+        padding:
+            0 18px;
 
         display: flex;
 
         align-items: center !important;
+
+        position: relative;
     }
 
 
-    /* =========================
-       TEXT
-    ========================= */
+    /* TEXT */
 
     .left-content {
-        width: 100% !important;
+        width: 285px;
 
-        max-width: 300px;
-
-        margin-top: 0 !important;
+        margin-top: -45px;
 
         position: relative;
 
-        z-index: 40;
-
-        /* فقط کمی بالاتر از حالت اصلی */
-        transform: translateY(-12px);
+        z-index: 30;
     }
 
-
     .small-line {
+        width: 18px;
+        height: 2px;
+
+        margin-bottom: 7px;
+    }
+
+    .category {
+        font-size: 10px;
+
         margin-bottom: 8px;
     }
 
-
-    .category {
-        font-size: 11px;
-
-        margin-bottom: 10px;
-    }
-
-
     .left-content h1 {
-        font-size: 38px !important;
+        font-size: 35px !important;
 
-        line-height: .95;
+        line-height: .94;
 
-        margin-bottom: 10px !important;
+        letter-spacing: -.5px;
+
+        margin-bottom: 9px !important;
     }
-
 
     .description {
-        width: 100% !important;
+        width: 265px;
 
-        max-width: 270px;
+        max-width: 265px;
 
-        font-size: 8.5px !important;
+        font-size: 8px !important;
 
-        line-height: 1.55;
+        line-height: 1.5;
 
-        margin-bottom: 12px !important;
+        margin-bottom: 11px !important;
     }
 
 
-    /* =========================
-       DISCOVER BUTTONS
-    ========================= */
+    /* BUTTONS */
 
     .discover-area {
+        gap: 8px;
+
         display: flex;
 
         align-items: center;
-
-        gap: 9px;
     }
 
     .bookmark {
@@ -2442,11 +2827,13 @@ body {
     }
 
     .discover-btn {
-        height: 29px;
+        height: 28px;
 
-        padding: 0 14px;
+        padding: 0 13px;
 
-        font-size: 8px;
+        font-size: 7px;
+
+        letter-spacing: .3px;
     }
 
 
@@ -2457,77 +2844,54 @@ body {
     .cards-wrapper {
         position: absolute;
 
-        right: 50% !important;
+        right: 50%;
 
-        bottom: 92px !important;
+        bottom: 72px;
 
         transform: translateX(50%);
 
-        width: 100% !important;
+        width: 355px;
 
-        max-width: 360px;
+        max-width: calc(100% - 30px);
 
-        height: 135px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        overflow: visible;
+        overflow: hidden;
 
         z-index: 5;
     }
 
-
     .trip-cards {
-        width: 100%;
+        gap: 7px;
 
-        max-width: 360px;
+        width: max-content;
 
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        gap: 6px;
-
-        position: relative;
+        margin: 0 auto;
     }
-
-
-    /* کوتاه‌تر شدن کارت‌ها */
 
     .trip-card {
-        width: 84px !important;
+        flex: 0 0 82px;
 
-        min-width: 84px !important;
+        width: 82px;
 
-        flex-basis: 84px !important;
+        height: 118px;
 
-        height: 120px !important;
-
-        flex-shrink: 0;
+        border-radius: 6px;
     }
 
 
-    /* =========================
-       CARD TEXT
-    ========================= */
+    /* CARD TEXT */
 
     .card-info {
-        left: 8px;
+        left: 7px;
         right: 6px;
 
-        bottom: 8px;
+        bottom: 7px;
     }
 
     .card-line {
-        width: 16px;
-
+        width: 15px;
         height: 2px;
 
-        margin-bottom: 4px;
+        margin-bottom: 3px;
     }
 
     .card-location {
@@ -2537,7 +2901,7 @@ body {
     }
 
     .card-title {
-        font-size: 12px;
+        font-size: 11px;
 
         line-height: 1;
     }
@@ -2548,18 +2912,213 @@ body {
     ========================= */
 
     .bottom-controls {
-        position: absolute;
+        left: 14px;
+        right: 14px;
 
-        left: 16px !important;
-        right: 16px !important;
-
-        bottom: 15px !important;
+        bottom: 12px;
 
         z-index: 100;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .arrows {
+        gap: 6px;
+    }
+
+    .arrows button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .progress-area {
+        margin-left: 10px;
     }
 
     .progress-line {
-        width: 100% !important;
+        width: 100%;
+    }
+}
+
+
+
+/* =========================================================
+   SMALL PHONE
+   375px AND BELOW
+========================================================= */
+
+@media (max-width: 375px) {
+
+    .navbar {
+        height: 68px;
+        min-height: 68px;
+
+        padding: 0 12px;
     }
 
+    .navbar > .container-fluid {
+        height: 68px;
+
+        padding: 0 !important;
+    }
+
+    .navbar .logo {
+        font-size: 18px !important;
+
+        gap: 5px;
+    }
+
+    .navbar .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navbar-toggler {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .navbar-collapse {
+        top: 68px;
+
+        left: 10px;
+        right: 10px;
+
+        padding: 13px !important;
+    }
+
+
+    /* CONTENT */
+
+    .content {
+        height: 100vh;
+
+        padding: 0 14px;
+
+        align-items: center !important;
+    }
+
+    .left-content {
+        width: 270px;
+
+        margin-top: -35px;
+
+        z-index: 30;
+    }
+
+    .category {
+        font-size: 9px;
+    }
+
+    .left-content h1 {
+        font-size: 31px !important;
+
+        margin-bottom: 8px !important;
+    }
+
+    .description {
+        width: 245px;
+
+        font-size: 7.5px !important;
+
+        line-height: 1.5;
+
+        margin-bottom: 10px !important;
+    }
+
+    .discover-area {
+        gap: 7px;
+    }
+
+    .bookmark {
+        width: 23px;
+        height: 23px;
+    }
+
+    .discover-btn {
+        height: 26px;
+
+        padding: 0 11px;
+
+        font-size: 6.5px;
+    }
+
+
+    /* CARDS */
+
+    .cards-wrapper {
+        right: 50%;
+
+        bottom: 68px;
+
+        transform: translateX(50%);
+
+        width: 320px;
+
+        max-width: calc(100% - 20px);
+
+        overflow: hidden;
+
+        z-index: 5;
+    }
+
+    .trip-cards {
+        gap: 5px;
+    }
+
+    .trip-card {
+        flex: 0 0 72px;
+
+        width: 72px;
+
+        height: 105px;
+    }
+
+
+    .card-info {
+        left: 6px;
+        right: 5px;
+
+        bottom: 6px;
+    }
+
+    .card-line {
+        width: 13px;
+        height: 2px;
+
+        margin-bottom: 3px;
+    }
+
+    .card-location {
+        font-size: 5px;
+    }
+
+    .card-title {
+        font-size: 9px;
+    }
+
+
+    /* CONTROLS */
+
+    .bottom-controls {
+        left: 10px;
+        right: 10px;
+
+        bottom: 10px;
+    }
+
+    .arrows {
+        gap: 5px;
+    }
+
+    .arrows button {
+        width: 31px;
+        height: 31px;
+    }
+
+    .progress-area {
+        margin-left: 8px;
+    }
 }
