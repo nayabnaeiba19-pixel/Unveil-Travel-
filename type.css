@@ -2803,3 +2803,51 @@ body {
         z-index: 100;
     }
 }
+/* =========================================================
+   TABLET CARD POSITION FIX
+========================================================= */
+
+@media (min-width: 426px) and (max-width: 768px) {
+
+    .cards-wrapper {
+        position: absolute;
+
+        left: 52% !important;
+        right: auto !important;
+
+        transform: none !important;
+
+        bottom: 88px;
+
+        width: 500px !important;
+        max-width: none !important;
+
+        height: 170px;
+
+        overflow: visible;
+
+        z-index: 5;
+    }
+
+    .trip-cards {
+        display: flex;
+
+        width: max-content !important;
+        max-width: none !important;
+
+        justify-content: flex-start !important;
+
+        gap: 12px;
+
+        margin: 0 !important;
+    }
+
+    .trip-card {
+        flex: 0 0 105px !important;
+
+        width: 105px !important;
+        min-width: 105px !important;
+
+        height: 155px !important;
+    }
+}
