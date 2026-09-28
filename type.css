@@ -2225,3 +2225,263 @@ body {
         width: 100% !important;
     }
 }
+/* =========================================================
+   425px MOBILE FIX - TYPE PAGE
+========================================================= */
+
+@media (max-width: 425px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .navbar {
+        height: 72px;
+        min-height: 72px;
+        padding: 0 14px;
+    }
+
+    .navbar > .container-fluid {
+        height: 72px;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar .logo {
+        display: flex;
+        align-items: center;
+
+        gap: 6px;
+
+        font-size: 21px !important;
+        line-height: 1;
+
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .navbar .logo img {
+        width: 36px;
+        height: 36px;
+
+        flex-shrink: 0;
+    }
+
+    .navbar-toggler {
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex-shrink: 0;
+
+        border-radius: 50%;
+    }
+
+    .navbar-toggler-icon {
+        width: 19px;
+        height: 19px;
+    }
+
+
+    /* =========================
+       MOBILE NAV MENU
+    ========================= */
+
+    .navbar-collapse {
+        position: absolute;
+
+        top: 72px;
+        left: 12px;
+        right: 12px;
+
+        width: auto;
+
+        padding: 16px !important;
+
+        border-radius: 16px;
+
+        z-index: 9999;
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        gap: 2px !important;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+
+        padding: 11px 8px !important;
+
+        font-size: 9px;
+    }
+
+    .nav-actions {
+        width: 100%;
+
+        margin-top: 10px !important;
+
+        justify-content: center;
+    }
+
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+
+    .content {
+        width: 100% !important;
+
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .left-content {
+        width: 100% !important;
+
+        max-width: 320px;
+
+        margin-top: 0 !important;
+
+        position: relative;
+
+        z-index: 30;
+    }
+
+    .left-content h1 {
+        font-size: 40px !important;
+
+        line-height: .95;
+
+        margin-bottom: 12px;
+    }
+
+    .description {
+        width: 100% !important;
+
+        max-width: 285px;
+
+        font-size: 9px !important;
+
+        line-height: 1.6;
+    }
+
+
+    /* =========================
+       CARDS
+    ========================= */
+
+    .cards-wrapper {
+        position: absolute;
+
+        width: 100% !important;
+        max-width: 390px;
+
+        height: 170px;
+
+        right: 50% !important;
+
+        bottom: 92px !important;
+
+        transform: translateX(50%);
+
+        display: flex;
+
+        justify-content: center;
+
+        overflow: visible;
+
+        z-index: 5;
+    }
+
+    .trip-cards {
+        width: 100%;
+
+        max-width: 390px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 7px;
+
+        position: relative;
+
+        z-index: 5;
+    }
+
+    .trip-card {
+        width: 94px !important;
+
+        min-width: 94px !important;
+
+        flex-basis: 94px !important;
+
+        height: 145px !important;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =========================
+       KEEP TEXT ABOVE CARDS
+    ========================= */
+
+    .content,
+    .left-content {
+        position: relative;
+
+        z-index: 30;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .luxury-book {
+        position: relative;
+
+        z-index: 40;
+
+        margin-top: 18px !important;
+
+        padding: 10px 20px !important;
+
+        font-size: 9px;
+    }
+
+
+    /* =========================
+       BOTTOM CONTROLS
+    ========================= */
+
+    .bottom-controls {
+        position: absolute;
+
+        left: 16px !important;
+        right: 16px !important;
+
+        bottom: 15px !important;
+
+        z-index: 50;
+    }
+
+    .progress-line {
+        width: 100% !important;
+    }
+}
