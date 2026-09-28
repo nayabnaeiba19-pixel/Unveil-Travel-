@@ -2233,6 +2233,10 @@ body {
    TYPE PAGE
    FINAL 425px MOBILE LAYOUT
 ========================================================= */
+/* =========================================================
+   TYPE PAGE
+   FINAL 425px MOBILE LAYOUT
+========================================================= */
 
 @media (max-width: 425px) {
 
@@ -2370,7 +2374,8 @@ body {
 
         z-index: 40;
 
-        transform: translateY(-1px);
+        /* فقط کمی بالاتر از جای اصلی */
+        transform: translateY(-3px);
     }
 
 
@@ -2431,7 +2436,7 @@ body {
 
 
     /* =========================
-       CARDS AREA
+       CARDS
     ========================= */
 
     .cards-wrapper {
@@ -2496,7 +2501,7 @@ body {
 
 
     /* =========================
-       KEEP TEXT ABOVE CARDS
+       LAYERING
     ========================= */
 
     .content,
